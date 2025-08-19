@@ -45,14 +45,14 @@ Activate your `venv` then proceed by following these instructions:
     Navigate to your ComfyUI `custom_nodes` directory and clone this repository:
     ```bash
     cd ComfyUI/custom_nodes/
-    git clone [https://github.com/rickrender/ComfyUI-Vectorizer-Pack.git](https://github.com/rickrender/ComfyUI-Vectorizer-Pack.git)
+    git clone https://github.com/rickrender/ComfyUI-Vectorizer-API.git
     ```
 
 2.  **Install Python Dependencies**
 
     Install the required Python packages using the included `requirements.txt` file.
     ```bash
-    cd ComfyUI-Vectorizer-Pack
+    cd ComfyUI-Vectorizer-API
     pip install -r requirements.txt
     ```
 
