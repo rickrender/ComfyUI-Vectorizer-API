@@ -34,33 +34,31 @@ Outputs: image_rgba (the subject on a transparent background) and mask (the blac
 Functionality: Intelligently detects the background color by analyzing the image borders, making it perfect for automated pipelines where the background color might vary slightly between images.
 
 ⚙️ Installation
-
 Activate your venv then proceed to following these instructions:
 
-Clone the Repository
+1. Clone the Repository
 Navigate to your ComfyUI custom_nodes directory and clone this repository:
 
 cd ComfyUI/custom_nodes/
 git clone https://github.com/rickrender/ComfyUI-Vectorizer-Pack.git
 
-Install Python Dependencies
+2. Install Python Dependencies
 Install the required Python packages using the included requirements.txt file.
 
 cd ComfyUI-Vectorizer-Pack
 pip install -r requirements.txt
 
-Install System Dependencies (for CairoSVG)
+3. Install System Dependencies (for CairoSVG)
 The scaled_png feature relies on the Cairo graphics library. You must install it on your system.
 
-For Debian/Ubuntu you may need an alternative package:
+For Debian/Ubuntu:
 
 sudo apt-get update && sudo apt-get install libcairo2-dev pkg-config
 
 For other operating systems, please consult their package manager to install the "Cairo" library.
 
-Set Up API Credentials (Recommended)
-Create an account at vectorizer.ai and get your keys from here: https://vectorizer.ai/account 
-For convenience, create a file named config.json inside the ComfyUI-Vectorizer-Pack folder. Add your API keys to this file:
+4. Set Up API Credentials (Recommended)
+Create an account at vectorizer.ai and get your keys from your account page. For convenience, create a file named config.json inside the ComfyUI-Vectorizer-Pack folder. Add your API keys to this file:
 
 {
   "api_id": "YOUR_REAL_API_ID",
@@ -69,7 +67,7 @@ For convenience, create a file named config.json inside the ComfyUI-Vectorizer-P
 
 The node will automatically use these credentials if the fields in the UI are left blank. You can also enter them in the UI if you wish instead.
 
-Restart ComfyUI
+5. Restart ComfyUI
 Completely restart your ComfyUI instance. The new nodes will appear in the "Conversion" category.
 
 workflow Example
