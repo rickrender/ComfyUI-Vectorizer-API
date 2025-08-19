@@ -24,13 +24,17 @@ This node is the bridge to the Vectorizer.AI service. It takes an image and send
 - **Output**: Returns the original or processed `IMAGE` back into the workflow.
 - **Functionality**: Saves the final vector (`.svg`) or raster (`.png`) file to your ComfyUI `output` directory, respecting your `filename_prefix` and numbering.
 
-### 2. Background Remover (Color)
+### 2. Background Remover (Shape)
 
-A fully automatic chroma keyer designed for images with a solid color background.
+A node to remove the single largest shape from the background of the returned SVG file with an option to save the edited SVG.
+
+### 3. Background Remover (Color)
+
+A fast chroma keyer designed for images with a solid color background.
 
 - **Inputs**: `image`, `threshold` (to control the edge softness/fuzziness).
 - **Outputs**: `image_rgba` (the subject on a transparent background) and `mask` (the black and white silhouette).
-- **Functionality**: Intelligently detects the background color by analyzing the image borders, making it perfect for automated pipelines where the background color might vary slightly between images.
+- **Functionality**: Detects the background color by analyzing the image borders, making it perfect for automated pipelines where the background color might vary slightly between images.
 
 ---
 
