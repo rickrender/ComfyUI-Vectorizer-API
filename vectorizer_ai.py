@@ -54,10 +54,10 @@ class VectorizerAINode:
             },
             "optional": {
                 "save_svg": ("BOOLEAN", {"default": True}),
-                "filename_prefix": ("STRING", {"default": "SVG/vector"}),
+                "filename_prefix": ("STRING", {"default": "SVG/vector_raw"}),
                 "max_colors": ("INT", {"default": 0, "min": 0, "max": 256, "step": 1, "display": "slider"}),
-                "min_shape_area": ("FLOAT", {"default": 0.125, "min": 0.0, "max": 100.0, "step": 0.001}),
-                "adobe_compatibility": ("BOOLEAN", {"default": False}),
+                "min_shape_area": ("FLOAT", {"default": 1.000, "min": 0.0, "max": 100.0, "step": 0.001}),
+                "adobe_compatibility": ("BOOLEAN", {"default": True}),
                 "disable_gap_filler": ("BOOLEAN", {"default": True}),
             }
         }
