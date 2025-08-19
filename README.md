@@ -8,7 +8,7 @@ This repository contains a pack of useful nodes for ComfyUI designed to simplify
 
 - **High-Quality Vectorization**: Integrates with the powerful Vectorizer.AI API to convert PNGs into clean, editable SVGs.
 - **Infinite Scalability**: Includes a `scaled_png` option to render the resulting SVG at any resolution (e.g., 4x, 8x) for crisp, high-resolution raster images without quality loss.
-- **Background Removal Nodes**: Node options for two different methods that detect and remove a solid color background or the largest shape from a returned SVG file.
+- **Background Removal Nodes**: Node options for two different methods that detect and remove a solid color background from a raster image or the largest shape from a returned SVG file.
 - **Mask Output for Advanced Workflows**: The background remover provides a perfect black and white silhouette mask, ideal for inpainting, compositing, sticker effects, and driving ControlNets.
 - **Secure & Convenient**: Supports API key management via an optional `config.json` file, so you don't have to enter your credentials in the workflow.
 
