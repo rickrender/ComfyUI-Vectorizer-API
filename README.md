@@ -8,7 +8,7 @@ This repository contains a pack of useful nodes for ComfyUI designed to simplify
 
 - **High-Quality Vectorization**: Integrates with the powerful Vectorizer.AI API to convert PNGs into clean, editable SVGs.
 - **Infinite Scalability**: Includes a `scaled_png` option to render the resulting SVG at any resolution (e.g., 4x, 8x) for crisp, high-resolution raster images without quality loss.
-- **Automatic Background Removal**: A smart "green screen" node that automatically detects and removes any solid color background. No AI guessing, just precise, controllable results.
+- **Background Removal Nodes**: Two nodes that detect and removes any solid color background or the largest shape from a returned SVG file.
 - **Mask Output for Advanced Workflows**: The background remover provides a perfect black and white silhouette mask, ideal for inpainting, compositing, sticker effects, and driving ControlNets.
 - **Secure & Convenient**: Supports API key management via an optional `config.json` file, so you don't have to enter your credentials in the workflow.
 
@@ -26,15 +26,15 @@ This node is the bridge to the Vectorizer.AI service. It takes an image and send
 
 ### 2. Background Remover (Shape)
 
-A node to remove the single largest shape from the background of the returned SVG file with an option to save the edited SVG.
+A node to remove the single largest shape from the background of the returned SVG file with an option to save the edited SVG or pass through an RGBA PNG.
 
-### 3. Background Remover (Color)
+### 3. Background Remover (Color) [WIP]
 
 A fast chroma keyer designed for images with a solid color background.
 
 - **Inputs**: `image`, `threshold` (to control the edge softness/fuzziness).
 - **Outputs**: `image_rgba` (the subject on a transparent background) and `mask` (the black and white silhouette).
-- **Functionality**: Detects the background color by analyzing the image borders, making it perfect for automated pipelines where the background color might vary slightly between images.
+- **Functionality**: Detects the background color by analyzing the image borders.
 
 ---
 
@@ -85,24 +85,9 @@ Activate your `venv` then proceed by following these instructions:
 
 ---
 
-## Example Usage
-
-Here is a simple, powerful pipeline to go from a generated character to a clean, transparent asset.
-
-1.  **Generate Image**: Use your preferred method to generate a character on a solid color background.
-2.  **Vectorize & Scale**: Connect the generated image to the `Vectorizer.ai API` node.
-    - Set `output_format` to `scaled_png`.
-    - Set `scale` to your desired multiplier (e.g., `4.0`).
-3.  **Remove Background**: Connect the `IMAGE` output from the Vectorizer node to the `Background Remover (Color)` node.
-    - Adjust the `threshold` slider (a value around `0.3` to `0.4` is often a good start) to get a clean edge with minimal color halo.
-4.  **Save Final Image**: Connect the `image_rgba` output from the remover node to a `Save Image` node. Ensure you use a format that supports transparency, like PNG.
-5.  **(Optional) Use the Mask**: Connect the `mask` output to other nodes to perform inpainting, create outlines, or for advanced compositing.
-
----
-
 ## Dependencies
 
-- **Python**: `requests`, `CairoSVG`
+- **Python**: `requests`, `lxml`, `CairoSVG`
 - **System**: `libcairo2` or equivalent
 
 ## License
