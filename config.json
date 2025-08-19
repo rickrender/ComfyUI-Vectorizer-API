@@ -1,4 +1,4 @@
 {
-  "api_id": "api-id-here",
-  "api_secret": "api-secret-here"
+  "api_id": "YOUR_REAL_API_ID",
+  "api_secret": "YOUR_REAL_API_SECRET"
 }
