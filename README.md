@@ -1,8 +1,6 @@
 # ComfyUI Vectorizer & Background Remover Pack
 
-This repository contains a pack of two powerful nodes for ComfyUI designed to automate a professional vector-based image processing pipeline. Convert raster images to clean, scalable vectors using the [Vectorizer.AI API](https://vectorizer.ai/), and then perfectly remove the background for compositing and further creative work.
-
-This pack is ideal for automating the creation of character sprites, icons, logos, and other graphic assets.
+This repository contains a pack of useful nodes for ComfyUI designed to simplify a professional vector-based image processing pipeline. Convert raster images to clean, scalable vectors using the [Vectorizer.AI API](https://vectorizer.ai/), and then remove the background with a background removal node for compositing and further creative work. There are options to scale the vector graphic to a user defined value, this can allow for higher resolution raster graphics without quality loss.
 
 ---
 
