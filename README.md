@@ -83,7 +83,7 @@ Activate your `venv` then proceed by following these instructions:
 
 ---
 
-## workflow Example
+## Example Usage
 
 Here is a simple, powerful pipeline to go from a generated character to a clean, transparent asset.
 
