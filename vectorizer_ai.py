@@ -196,7 +196,7 @@ class BackgroundRemoverSVGNode:
                 "scale": ("FLOAT", {"default": 4.0, "min": 1.0, "max": 16.0, "step": 0.5}),
             },
             "optional": {
-                "save_svg": ("BOOLEAN", {"default": False}),
+                "save_svg": ("BOOLEAN", {"default": True}),
                 "filename_prefix": ("STRING", {"default": "SVG/vector_edited"}),
             }
         }
