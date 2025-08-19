@@ -2,6 +2,7 @@
 
 This repository contains a pack of useful nodes for ComfyUI designed to simplify a professional vector-based image processing pipeline. Convert raster images to clean, scalable vectors using the [Vectorizer.AI API](https://vectorizer.ai/), and then remove the background with a background removal node for compositing and further creative work. There are options to scale the vector graphic to a user defined value, this can allow for higher resolution raster graphics without quality loss.
 
+![workflow](https://github.com/rickrender/ComfyUI-Vectorizer-API/blob/main/examples/workflow.png)
 ---
 
 ## ✨ Core Features
