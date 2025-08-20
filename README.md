@@ -41,6 +41,9 @@ A fast chroma keyer designed for images with a solid color background.
 
 ## ⚙️ Installation
 
+Automatic Install: Search for `Vectorizer API` in ComfyUI Manager and click `Install`.
+
+Manual Install:
 Activate your `venv` then proceed by following these instructions:
 
 1.  **Clone the Repository**
